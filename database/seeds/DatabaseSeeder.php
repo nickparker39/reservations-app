@@ -14,7 +14,9 @@ class DatabaseSeeder extends Seeder
     {
         $user = User::create([
             'name' => 'YOUR NAME',
-            'cell_phone' => '+15551234567'
+            'cell_phone' => '+15551234567',
+            'email' => 'your@email.com',
+            'password' => bcrypt('password')
         ]);
 
         $user->reservations()->create([
